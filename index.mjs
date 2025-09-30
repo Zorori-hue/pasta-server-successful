@@ -94,8 +94,8 @@ async function handleSave(playerId, body) {
         try {
             // const result = await db.query('SELECT 1 as test');
             // console.log(result);
-            const [result] =await pool.query('INSERT INTO test_table (name, age) VALUES (?, ?)',
-      [path, playerId]);
+            const [result] =await db.query('INSERT INTO test_table (name, age) VALUES (?, ?)',
+      ["test", playerId]);
                 
         }catch(error){
             console.error('MySQL connection error:', error);
